@@ -162,6 +162,7 @@ public class Exercise1Test {
     @org.junit.jupiter.api.Order(5)
     @DisplayName("Item: testar att klassen inte kan instansieras.")
     void itemIsAbstract() {
+        assertTrue(ReflectionUtils.isPublic(Item.class), "Klassen Item ska vara publik");
         assertTrue(ReflectionUtils.isAbstract(Item.class), "Klassen Item ska vara abstrakt och inte kunna instansieras.");
     }
 
