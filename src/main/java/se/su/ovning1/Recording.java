@@ -30,7 +30,6 @@ public abstract class Recording extends Item implements PriceableWithVAT25{
         double newPrice = condition * price / 10;
         return (newPrice <= 10) ? 10 : newPrice;
     }
-
     @Override
     public String toString(){
         return "String";
@@ -40,6 +39,9 @@ public abstract class Recording extends Item implements PriceableWithVAT25{
         return year;
     }
 
+    public double getVAT(){
+        return VAT25;
+    }
     protected double getOriginalPrice(){
         return price;
     }

@@ -22,7 +22,9 @@ public class Book extends Item implements PriceableWithVAT6{
     }
 
     public double getPrice(){
-        return price;
+        double newPrice = price;
+        if (bound) newPrice = price * 1.3;
+        return newPrice;
     }
 
     @Override
@@ -32,5 +34,9 @@ public class Book extends Item implements PriceableWithVAT6{
 
     public String getType(){
         return "Book";
+    }
+
+    public double getVAT(){
+            return VAT6;
     }
 }

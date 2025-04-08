@@ -19,10 +19,14 @@ public class Order{
         return "receipt";
     }
 
-    public double getTotalValuePlusVAT(){
+    public double getTotalValuePlusVAT(){ return 10;
     }
 
     public double getTotalValue(){
-        return 10;
+        double totalValue = 0;
+        for (Item items : orderList){
+           totalValue += items.getPrice();
+        }
+        return totalValue;
     }
 }
