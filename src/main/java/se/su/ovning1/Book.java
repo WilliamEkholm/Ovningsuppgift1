@@ -1,7 +1,7 @@
 package se.su.ovning1;
 
 public class Book extends Item implements PriceableWithVAT6{
-
+ // hej jag heter julia och är bäst
     private final double price;
     private final boolean bound;
     private final String author;
