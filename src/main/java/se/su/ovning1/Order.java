@@ -6,11 +6,12 @@ import java.util.Arrays;
 public class Order{
 
     final long orderNumber;
-    static long counter;
+    private static long counter = 1;
     private final ArrayList<Item> orderList;
 
-    public Order(Item... Item){
-        this.orderList = new ArrayList<>(Arrays.asList(Item));
+    public Order(Item... items){
+        this.orderList = new ArrayList<>(Arrays.asList(items));
+        this.orderNumber = counter++;
 
     }
 
@@ -19,7 +20,6 @@ public class Order{
     }
 
     public double getTotalValuePlusVAT(){
-        return 12;
     }
 
     public double getTotalValue(){
