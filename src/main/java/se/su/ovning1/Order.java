@@ -9,8 +9,8 @@ public class Order{
     private static long counter = 1;
     private final ArrayList<Item> orderList;
 
-    public Order(Item... items){
-        this.orderList = new ArrayList<>(Arrays.asList(items));
+    public Order(Item... item){
+        this.orderList = new ArrayList<>(Arrays.asList(item));
         this.orderNumber = counter++;
 
     }
@@ -19,7 +19,14 @@ public class Order{
         return "receipt";
     }
 
-    public double getTotalValuePlusVAT(){ return 10;
+    public double getTotalValuePlusVAT(){
+        double price = 0;
+        double VATValue = 0;
+        for (Item item : orderList){
+            price += item.getPrice();
+            VATValue += item.getVAT();
+        }
+        return price + VATValue;
     }
 
     public double getTotalValue(){
