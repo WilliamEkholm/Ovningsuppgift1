@@ -16,7 +16,14 @@ public class Order{
     }
 
     public String getReceipt(){
-        return "receipt";
+        StringBuilder receipt = new StringBuilder();
+        receipt.append("Order #").append(orderNumber).append("\nItems:\n");
+        for (Item item : orderList){
+            receipt.append("- ").append(item.toString()).append("\n");
+        }
+        receipt.append(String.format("Total (excl.VAT): %.2f\n", getTotalValue()));
+        receipt.append(String.format("Total (incl VAT): %.2f\n", getTotalValuePlusVAT()));
+        return receipt.toString();
     }
 
     public double getTotalValuePlusVAT(){
