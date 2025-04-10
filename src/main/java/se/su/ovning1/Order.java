@@ -23,6 +23,7 @@ public class Order{
         }
         receipt.append(String.format("Total (excl.VAT): %.2f\n", getTotalValue()));
         receipt.append(String.format("Total (incl VAT): %.2f\n", getTotalValuePlusVAT()));
+        return receipt.toString();
 
     }
 
