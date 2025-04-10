@@ -5,8 +5,8 @@ import java.util.Arrays;
 
 public class Order{
 
+    private static long counter;
     final long orderNumber;
-    private static long counter = 1;
     private final ArrayList<Item> orderList;
 
     public Order(Item... item){

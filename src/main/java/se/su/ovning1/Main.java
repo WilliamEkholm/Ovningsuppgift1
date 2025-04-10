@@ -1,5 +1,5 @@
-package se.su.ovning1;
 
+package se.su.ovning1;
 public class Main {
     public static void main(String[] args) {
 
