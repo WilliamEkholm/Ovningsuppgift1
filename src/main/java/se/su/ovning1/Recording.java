@@ -39,9 +39,6 @@ public abstract class Recording extends Item implements PriceableWithVAT25{
         return year;
     }
 
-    public double getVAT(){
-        return VAT25;
-    }
     protected double getOriginalPrice(){
         return price;
     }

@@ -13,11 +13,11 @@ public class Book extends Item implements PriceableWithVAT6{
         this.author = author;
     }
 
-    public boolean isBound(){
+    private boolean isBound(){
         return bound;
     }
 
-    public String getAuthor(){
+    private String getAuthor(){
         return author;
     }
 
@@ -32,11 +32,7 @@ public class Book extends Item implements PriceableWithVAT6{
         return getType() +  ":" + "name=" + "'" + getName() + "', " + "author=" + "'" + getAuthor() + "', " + "bound=" + isBound() + ", " + "price=" + getPrice() + ", " + "price+vat=" + getPriceWithVAT();
     }
 
-    public String getType(){
+    private String getType(){
         return "Book";
-    }
-
-    public double getVAT(){
-            return VAT6;
     }
 }

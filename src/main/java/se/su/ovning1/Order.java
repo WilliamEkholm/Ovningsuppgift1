@@ -27,13 +27,11 @@ public class Order{
     }
 
     public double getTotalValuePlusVAT(){
-        double price = 0;
         double VATValue = 0;
         for (Item item : orderList){
-            price += item.getPrice();
             VATValue += item.getVAT();
         }
-        return price + VATValue;
+        return getTotalValue() + VATValue;
     }
 
     public double getTotalValue(){
